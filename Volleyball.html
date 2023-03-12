@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Спорт у моєму житті</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: 'Noto Sans', sans-serif;
+			margin: 0;
+			padding: 0;
+
+		}
+
+		.navbar {
+			background-color: #222;
+			color: #fff;
+			height: 70px;
+			position: fixed;
+			width: 100%;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			z-index: 9999;
+		}
+
+		.navbar-container {
+			height: inherit;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.navbar-sport{
+			padding: 30px;
+			font-size: 30px;
+		}
+
+		.navbar-menu{
+			padding: 30px;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			margin: 0 10px;
+		}
+
+		nav a:hover {
+			background-color: #444;
+		}
+
+		.container {
+			background-image: url("https://images.prom.ua/3120210015_vsi-potribni-aksesuari.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 940px;
+		}
+
+		h1 {
+			font-size: 100px;
+			text-align: center;
+		}
+
+    	.my-opinion-section {
+			background-color: #f5f5f5;
+			text-align: center;
+			padding: 325px 0;
+		}
+
+		.box {
+			border: 1px solid black;
+			border-radius: 10px;
+			padding: 10px;
+			width: 1100px;
+			margin: 0 auto;
+			text-align: center;
+        }
+
+		h2 {
+			font-size: 36px;
+			color: #555;
+		}
+
+		p {
+			font-size: 20px;
+			color: #666;
+			line-height: 1.5;
+		}
+
+		.my-gallery-section {
+			padding: 110px 0;
+			display: flex;
+	        justify-content: center;
+	        align-items: center;
+		}
+
+		.my-gallery-th,{
+			padding: 5px;
+		}
+
+		.my-gallery-td {
+		    padding: 5px;
+		}
+
+		.portrait {
+			height: 710px;
+			width: 350px;
+			object-fit: cover;
+		}
+
+		.landscape {
+			width: 705px;
+			height: 350px;
+			object-fit: cover;
+		}
+
+		.square {
+			width: 350px;
+			height: 350px;
+			object-fit: cover;
+		}
+
+		h3 {
+			font-size: 36px;
+			color: #333;
+			margin-top: 180px;
+		}
+
+		.rules table {
+		    width: 60%;
+		    margin: 0 auto;
+		    border-collapse: collapse;
+		    border: 1px solid #ccc;
+		    font-size: 16px;
+		    color: #333;
+		    margin-bottom: 30px;
+		}
+		.rules th, td {
+		    padding: 10px;
+		    text-align: left;
+		    vertical-align: top;
+		}
+		.rules th {
+		    background-color: #f2f2f2;
+		    font-weight: bold;
+		}
+		.rules tr:nth-child(even) {
+		    background-color: #f9f9f9;
+		}
+
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 40px;
+		}
+
+		.alert {
+		    background-color: #ffe6e6;
+		    color: #ff0000;
+		    padding: 10px;
+		    border: 1px solid #ff0000;
+		    width: 59%;
+		    margin: 0 auto;
+		    margin-bottom: 250px;
+		}
+
+		.social-icons {
+		  display: flex;
+		  justify-content: center;
+		  list-style: none;
+		  margin-top: 1rem;
+		  margin-bottom: 1rem;
+		  padding-left: 0;
+		}
+		.social-icons li {
+		  margin-left: 0.25rem;
+		  margin-right: 0.25rem;
+		}
+		.social-icons a {
+		  position: relative;
+		  display: block;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		  transition: background-color .3s ease-in-out;
+		  width: 2.5rem;
+		  height: 2.5rem;
+		  border-radius: .25rem;
+		}
+		.social-icons a::before {
+		  content: "";
+		  position: absolute;
+		  width: 1.2rem;
+		  height: 1.2rem;
+		  left: .65rem;
+		  top: .65rem;
+		  background: transparent no-repeat center center;
+		  background-size: 100% 100%;
+		}
+		.social-icons .social-icon-twitter::before {
+		    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z'/%3E%3C/svg%3E");&#125;
+		}
+		.social-icons .social-icon-fb::before {
+   		 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23ffffff' d='M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z'/%3E%3C/svg%3E");&#125;
+		}
+		.social-icons .social-icon-telegram::before {
+		  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z'/%3E%3C/svg%3E");&#125;
+		}
+		.social-icons .social-icon-youtube::before {
+		      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3Cpath fill='%2326e07f' d='M19.077 4.928A9.927 9.927 0 0012.011 2c-5.506 0-9.987 4.479-9.989 9.985a9.962 9.962 0 001.333 4.992L2 22l5.233-1.237a9.98 9.98 0 004.773 1.216h.004c5.505 0 9.986-4.48 9.989-9.985a9.922 9.922 0 00-2.922-7.066zm-2.179 10.626c-.208.583-1.227 1.145-1.685 1.186-.458.042-.887.207-2.995-.624-2.537-1-4.139-3.601-4.263-3.767-.125-.167-1.019-1.353-1.019-2.581s.645-1.832.874-2.081a.916.916 0 01.666-.312c.166 0 .333 0 .478.006.178.007.375.016.562.431.222.494.707 1.728.769 1.853s.104.271.021.437-.125.27-.249.416c-.125.146-.262.325-.374.437-.125.124-.255.26-.11.509.146.25.646 1.067 1.388 1.728.954.85 1.757 1.113 2.007 1.239.25.125.395.104.541-.063.146-.166.624-.728.79-.978s.333-.208.562-.125 1.456.687 1.705.812c.25.125.416.187.478.291.062.103.062.603-.146 1.186z'/%3e%3c/svg%3e");
+		    }
+	</style>
+</head>
+<body>
+	<nav class="navbar">
+		<div class="navbar-container">
+			<div class="navbar-sport">
+				СПОРТ У МОЄМУ ЖИТТІ
+			</div>
+			<div class="navbar-menu">
+				<a href="Run.html">Біг</a>
+				<a href="Volleyball.html">Волейбол</a>
+				<a href="Qustion.html">Питання</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<h1>Волейбол</h1>
+	</div>
+	<section class="my-opinion-section">
+  		<div class="box">
+    		<h2>Думка</h2>
+    		<p>Однією з головних переваг волейболу є те, що він може бути зіграний як на відкритому повітрі, так і в закритих приміщеннях, що робить його доступним для гри цілий рік. Також, волейбол може бути зіграний у будь-якому віці та рівні фізичної підготовки, що робить його ідеальним видом спорту для розваг та занять спортом.</p>
+  		</div>
+	</section>
+	<section class="my-gallery-section">
+		<table>
+			<tr>
+				<td class="my-gallery-td" colspan="2"><iframe width="560" height="315" src="https://www.youtube.com/embed/IJlZahUswas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="landscape"></iframe></td>
+				<td class="my-gallery-td" rowspan="2"><img src="https://img.olympicchannel.com/images/image/private/t_s_pog_staticContent_hero_lg/f_auto/primary/ts0pb12hj1xleueuhh22" class="portrait"></td>
+			</tr>
+			<tr>
+				<td class="my-gallery-td"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Volleyball_game.jpg/1200px-Volleyball_game.jpg"class="square"></td>
+				<td class="my-gallery-td"><img src="https://ss.sport-express.ru/userfiles/materials/181/1819532/volga.jpg" class="square"></td>
+			</tr>
+		</table>
+	</section>
+		<h3 align="center">Правила гри волейбол</h3>
+	<section class="rules">
+		<table>
+		  <thead>
+		    <tr>
+		      <th>Правила</th>
+		      <th>Опис</th>
+		      <th>Приклад</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>Кількість гравців</td>
+		      <td>Команда складається з 6 гравців</td>
+		      <td>6 гравців на полі</td>
+		    </tr>
+		    <tr>
+		      <td>Рахунок</td>
+		      <td>Гра йде до 25 очок, з різницею в 2 очки</td>
+		      <td>24-26, 25-23 і т.д.</td>
+		    </tr>
+		    <tr>
+		      <td>Подача</td>
+		      <td>Подача здійснюється із задньої лінії</td>
+		      <td>Серія подач гравця із задньої лінії</td>
+		    </tr>
+		    <tr>
+		      <td>Блокування</td>
+		      <td>Заборонено блокувати подачу та підбивати подачу вгору</td>
+		      <td>Порушення блокування</td>
+		    </tr>
+		    <tr>
+		      <td>Вихід за межі поля</td>
+		      <td>М'яч вважається "поза" якщо стосується лінії або виходить за її межі</td>
+		      <td>М'яч на лінії</td>
+		    </tr>
+		  </tbody>
+		</table>
+    </section>
+    <div class="alert">
+	  <strong>Увага:</strong> Волейбол - це командна гра, де кожен гравець повинен дотримуватись правил та діяти в інтересах своєї команди. Будь ласка, ознайомтеся з правилами гри та дотримуйтеся їх під час гри!
+	</div>
+    <footer>
+		<ul class="social-icons">
+			<li><a class="social-icon-twitter" href="#" title="..." target="_blank" rel="noopener"></a></li>
+		 	<li><a class="social-icon-fb" href="#" title="..." target="_blank" rel="noopener"></a></li>
+			<li><a class="social-icon-telegram" href="#" title="..." target="_blank" rel="noopener"></a></li>
+		</ul>
+    </footer>
+</body>
+</html>
